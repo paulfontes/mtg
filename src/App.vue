@@ -30,40 +30,15 @@ async function getAllCards(){
       </div>
     </div>
   </div>
-  <p v-for="card in cards" :key="card.id">{{ card.name }}</p>
+  <!-- <p>{{ card.name }}</p> -->
 <div class="container mt-5">
   <div class="row">
-    <div class="col-3">
+    <div v-for="card in cards" :key="card.id" class="col-3">
       <div class="card">
-        <!-- <p>{{ cards }}</p> -->
-          <img src="https://images.unsplash.com/photo-1767523881986-f8b55d3c5880?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="">
+          <img :src="card.imageUrl" alt="">
       </div>
       <div class="card-body">
-        <h3 class="card-title text-center">Card Name</h3>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1767523881986-f8b55d3c5880?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title text-center">Card Name</h3>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1767523881986-f8b55d3c5880?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title text-center">Card Name</h3>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1767523881986-f8b55d3c5880?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="">
-      </div>
-      <div class="card-body">
-        <h3 class="card-title text-center">Card Name</h3>
+        <h3 class="card-title text-center">{{card.name}}</h3>
       </div>
     </div>
   </div>
