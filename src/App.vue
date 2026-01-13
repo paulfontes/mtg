@@ -5,6 +5,8 @@ import { AppState } from './AppState';
 
 const cards = computed(()=> AppState.cards)
 
+const cardsWithImages = computed(()=> cards.value.filter(card => card.imageUrl))
+
 onMounted(()=>{
   getAllCards()
 })
@@ -33,12 +35,12 @@ async function getAllCards(){
   <!-- <p>{{ card.name }}</p> -->
 <div class="container mt-5">
   <div class="row">
-    <div v-for="card in cards" :key="card.id" class="col-3">
+    <div v-for="card in cardsWithImages" :key="card.id" class="col-3 mt-3">
       <div class="card">
           <img :src="card.imageUrl" alt="">
       </div>
       <div class="card-body">
-        <h3 class="card-title text-center">{{card.name}}</h3>
+        <!-- <h3 class="card-title text-center">{{card.name}}</h3> -->
       </div>
     </div>
   </div>
