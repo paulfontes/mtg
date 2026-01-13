@@ -3,12 +3,12 @@ import { computed, onMounted } from 'vue';
 import { mtgService } from './services/MTGService';
 import { AppState } from './AppState';
 
+const cards = computed(()=> AppState.cards)
 
 onMounted(()=>{
   getAllCards()
 })
 
-const cards = computed(()=> AppState.cards)
 
 async function getAllCards(){
   try {
@@ -30,7 +30,7 @@ async function getAllCards(){
       </div>
     </div>
   </div>
-  <p>{{ cards }}</p>
+  <p v-for="card in cards" :key="card.id">{{ card.name }}</p>
 <div class="container mt-5">
   <div class="row">
     <div class="col-3">
