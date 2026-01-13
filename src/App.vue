@@ -26,7 +26,7 @@ async function getAllCards(){
   <div class="container-fluid bg-secondary">
     <div class="row">
       <div class="col-5">
-        <h1 class="mt-3 text-black">Magic The Gathering Card Database!</h1>
+        <h1 class="mt-3 text-black">Magic The Gathering Card Database!!</h1>
       </div>
     </div>
   </div>
